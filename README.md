@@ -1,7 +1,7 @@
 # REST-API-example-with-Express.js-Sequelize-PostgreSQL-and-Next.js
 A simple REST API example made using Express.js, Sequelize, PostgreSQL and Next.js.
 
-<h1> Olá, este projeto é um exemplo simples de como fazer uma aplicação web acessar uma API REST. </h1>
+<h2> Olá, este projeto é um exemplo simples de como fazer uma aplicação web acessar uma API REST. </h2>
 
 * Instruções para rodar este projeto:
 - Ter o PostgreSQL instalado rodando na porta 5432
