@@ -66,6 +66,44 @@ exports.findOne = (req, res) => {
 
 };
 
+exports.findAllByModel = (req, res) => {
+
+  const model = req.query.model;
+
+  var condition = model ? { model: { [Op.like]: `%${model}%` } } : null;
+
+  Car.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Cars."
+      });
+    });
+
+};
+
+exports.findAllByColor = (req, res) => {
+
+  const color = req.query.color;
+
+  var condition = color ? { color: { [Op.like]: `%${color}%` } } : null;
+
+  Car.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Cars."
+      });
+    });
+
+};
+
 exports.update = (req, res) => {
 
     const chassi = req.params.chassi;

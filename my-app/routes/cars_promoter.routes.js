@@ -11,6 +11,10 @@ module.exports = app => {
     router.get("/cars", cars.findAll);
   
     router.get("/cars/:chassi", cars.findOne);
+
+    router.get("/cars/bymodel", cars.findAllByModel);
+
+    router.get("/cars/bycolor", cars.findAllByColor);
   
     router.put("/cars/:chassi", cars.update);
   
