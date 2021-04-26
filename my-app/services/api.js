@@ -1,10 +1,26 @@
-import axios from 'axios'
+export async function createC(data) {
 
-const api = axios.create({
+  
 
-  baseURL: 'http://localhost:8080'
+}
 
-});
+export async function readC() {
 
-export default api
+  const response = await fetch('http://localhost:8080/api/cars');
+
+  return await response.json();
+
+}
+
+export async function updateC() {
+
+
+
+}
+
+export async function deleteC() {
+
+
+
+}
 
