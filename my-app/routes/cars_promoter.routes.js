@@ -14,7 +14,7 @@ module.exports = app => {
 
     router.get("/cars/bycolor", cars.findAllByColor);
   
-    router.put("/cars/:chassi", cars.update);
+    router.put("/cars/update", cars.update);
   
     router.delete("/cars/:chassi", cars.deleteOne);
   

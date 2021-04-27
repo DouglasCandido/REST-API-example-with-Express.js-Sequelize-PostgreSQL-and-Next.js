@@ -57,7 +57,9 @@ export default function Carros() {
 
               <center>
 
-
+                <Link href="/update">
+                    <a>Ir para a página Update Car</a>
+                </Link>
               
               </center>
 
@@ -67,7 +69,9 @@ export default function Carros() {
 
               <center>
 
-
+                <Link href="/delete">
+                    <a>Ir para a página Delete Car</a>
+                </Link>
 
               </center>
 

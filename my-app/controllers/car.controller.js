@@ -106,7 +106,7 @@ exports.findAllByColor = (req, res) => {
 
 exports.update = (req, res) => {
 
-    const chassi = req.params.chassi;
+    const chassi = req.body.chassi;
   
     Car.update(req.body, {
       where: { chassi: chassi }
