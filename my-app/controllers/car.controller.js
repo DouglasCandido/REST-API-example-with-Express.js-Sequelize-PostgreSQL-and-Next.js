@@ -132,7 +132,7 @@ exports.update = (req, res) => {
 
 exports.deleteOne = (req, res) => {
 
-    const chassi = req.params.chassi;
+    const chassi = req.body.chassi;
   
     Car.destroy({
       where: { chassi: chassi }

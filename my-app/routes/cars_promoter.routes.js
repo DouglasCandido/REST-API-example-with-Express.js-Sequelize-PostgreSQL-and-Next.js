@@ -16,9 +16,9 @@ module.exports = app => {
   
     router.put("/cars/update", cars.update);
   
-    router.delete("/cars/:chassi", cars.deleteOne);
+    router.delete("/cars/delete", cars.deleteOne);
   
-    router.delete("/cars", cars.deleteAll);
+    // router.delete("/cars", cars.deleteAll);
 
     app.use('/api', router);
 
