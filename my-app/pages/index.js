@@ -76,6 +76,18 @@ export default function Carros() {
               </center>
 
               <br />
+
+              <center> <h1> <strong> Pesquisar os dados de carros que já estão cadastrados </strong> </h1> </center>
+
+              <center>
+
+                <Link href="/search">
+                    <a>Ir para a página Search Car</a>
+                </Link>
+
+              </center>
+
+              <br />
  
             </div>
 

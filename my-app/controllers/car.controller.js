@@ -68,7 +68,7 @@ exports.findOne = (req, res) => {
 
 exports.findAllByModel = (req, res) => {
 
-  const model = req.query.model;
+  const model = req.body.model;
 
   var condition = model ? { model: { [Op.like]: `%${model}%` } } : null;
 

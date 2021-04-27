@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function createCar() {
+export default function removeCar() {
 
     const deleteCar = async event => {
 
