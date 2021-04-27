@@ -2,17 +2,19 @@ import useSWR from 'swr';
 
 async function Fetcher(url) {
 
-  const res = await fetch(url)
+  const res = await fetch(url);
 
-  const json = await res.json()
+  const json = await res.json();
   
-  return json
+  return json;
 
 }
 
 export default function Carros() {
 
-    const {data, error} = useSWR(`http://localhost:8080/api/cars`, Fetcher)
+    const {data, error} = useSWR(`http://localhost:8080/api/cars`, Fetcher);
+
+    console.log(data);
 
     return (
 
