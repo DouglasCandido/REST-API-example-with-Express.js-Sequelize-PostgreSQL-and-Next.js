@@ -3,8 +3,6 @@ module.exports = app => {
     const cars = require("../controllers/car.controller.js");
   
     var router = require("express").Router();
-
-    // Enthusiasts
   
     router.post("/cars", cars.create);
   

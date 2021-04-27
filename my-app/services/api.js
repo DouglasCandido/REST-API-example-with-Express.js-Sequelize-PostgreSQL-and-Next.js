@@ -1,26 +1,10 @@
-export async function createC(data) {
+import axios from 'axios'
 
+const api = axios({
+
+  baseURL: 'http://localhost:8080/api/cars'
   
+})
 
-}
-
-export async function readC() {
-
-  const response = await fetch('http://localhost:8080/api/cars');
-
-  return await response.json();
-
-}
-
-export async function updateC() {
-
-
-
-}
-
-export async function deleteC() {
-
-
-
-}
+export default api
 

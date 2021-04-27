@@ -1,44 +1,35 @@
-import Link from 'next/link'
+import { useState } from 'react'
+import useSWR from 'swr'
 
-function HomePage() {
+export default function Carros() {
 
-  return (
+    const [carros, setCarros]= useState('resgate')
+    const {data, error} = useSWR(`http://localhost:8080/api/cars`, Fetcher)
 
-    <div>
+    console.log(data)
 
-      <center> <h1> <strong> Bem vindo(a) ao Cars Promoter, este app foi criado com o objetivo de promover e exibir modelos de carros. </strong> </h1> </center>
+    return (
 
-      <center> <h2> Página Inicial </h2> </center>
+        <div>
+            <div>
+              
+              {data ? <div> {data.map((c) => <div>{c.chassi} <br /> {c.model} <br /> {c.color} </div> )} </div>  : <p> Não foram encontrados carros. </p>}
+                      
+            </div>
+            
+        </div>
 
-      <Link href="/create">
-        <a>Ir para a página Cadastrar Carros</a>
-      </Link>
-
-      <br />
-
-      <Link href="/read">
-        <a>Ir para a página Exibir Carros</a>
-      </Link>
-
-      <br />
-
-      <Link href="/update">
-        <a>Ir para a página Alterar Carros</a>  
-      </Link>
-
-      <br />
-
-      <Link href="delete">
-        <a>Ir para a página Excluir Carros</a>
-      </Link>
-
-      <br />
-
-    </div>
-  
-  );
+    )
 
 }
 
-export default HomePage
+async function Fetcher(url) {
+
+    const res = await fetch(url)
+
+    const json = await res.json()
+    
+    return json
+
+}
 
