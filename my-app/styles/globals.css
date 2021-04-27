@@ -7,11 +7,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   */
-  background-color: gainsboro;
+  background-color: cornflowerblue;
 }
 
 div {
-  background-color: gainsboro;
+  background-color: cornflowerblue;
 }
 
 a {
@@ -22,5 +22,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  font-size: larger;
+  font-weight: bold;
+  color: black;
+  padding: 1rem;
+  background: midnightblue;
+}
+
+ul li {
+  background: orangered;
+  margin: 1rem;
 }
 
