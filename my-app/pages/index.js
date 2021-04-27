@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+import Link from 'next/link'
 
 async function Fetcher(url) {
 
@@ -44,13 +45,9 @@ export default function Carros() {
 
               <center>
 
-                Número do chassi: <input type="text" name="chassi"></input> &nbsp;
-
-                Modelo: <input type="text" name="model"></input> &nbsp;
-
-                Cor: <input type="text" name="color"></input> &nbsp;
-
-                <input type="submit"></input> &nbsp;
+                <Link href="/create">
+                  <a>Ir para a página Create Car</a>
+                </Link>
 
               </center>
 
@@ -60,13 +57,7 @@ export default function Carros() {
 
               <center>
 
-                Número do chassi: <input type="text" name="chassi"></input> &nbsp;
 
-                Modelo: <input type="text" name="model"></input> &nbsp;
-
-                Cor: <input type="text" name="color"></input> &nbsp;
-
-                <input type="submit"></input> &nbsp;
               
               </center>
 
@@ -76,9 +67,7 @@ export default function Carros() {
 
               <center>
 
-              Número do chassi: <input type="text" name="chassi"></input> &nbsp;
 
-              <input type="submit"></input> &nbsp;
 
               </center>
 
@@ -89,6 +78,7 @@ export default function Carros() {
     )
 
 }
+
 
 
 
